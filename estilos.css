@@ -1,13 +1,133 @@
+/* Importar fuente retro estilo arcade */
+@import url('https://googleapis.com');
+
 :root {
-  --fondo: #d9d1d1;
-  --textos: #f40808;
+  --mario-red: #e52521;
+  --mario-blue: #002fbe;
+  --mario-yellow: #fbd000;
+  --mario-sky: #5c94fc;
+  --mario-brown: #c84c0c;
+  --brick-dark: #800000;
 }
-h1 {
-  color: var(--textos);
+
+body {
+  background-color: var(--mario-sky);
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  font-size: 10px;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  background-image: linear-gradient(to bottom, #5c94fc 0%, #a2c1fc 100%);
+  min-height: 100vh;
 }
-h2 {
-  color: var(--textos);
+
+/* Barra de navegación estilo Bloque/Menú de NES */
+nav {
+  background-color: var(--mario-blue);
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0px #000;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: var(--mario-yellow);
+  text-decoration: none;
+  background-color: #000;
+  padding: 8px 12px;
+  border: 2px solid var(--mario-yellow);
+  display: inline-block;
+  transition: all 0.1s ease;
+}
+
+nav a:hover {
+  background-color: var(--mario-red);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Encabezados con estilo de letrero de Mario */
+section h1 {
+  color: var(--mario-yellow);
+  text-shadow:
+    3px 3px #000,
+    -1px -1px #000,
+    1px -1px #000,
+    -1px 1px #000;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+section h2 {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
 p {
-  color: var(--textos);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-left: 5px solid var(--mario-yellow);
+  padding: 10px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px #000;
+}
+
+/* Formulario estilo caja de diálogo o tubería */
+form {
+  background-color: var(--mario-brown);
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  padding: 20px;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  color: var(--mario-yellow);
+  margin-bottom: 5px;
+  text-shadow: 1px 1px #000;
+}
+
+input[type='text'] {
+  width: calc(100% - 16px);
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: 8px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Botón de envío estilo Item Box / Moneda */
+input[type='submit'] {
+  background-color: var(--mario-yellow);
+  color: #000;
+  border: 3px solid #000;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000;
+  transition: 0.1s;
+}
+
+input[type='submit']:hover {
+  background-color: var(--mario-red);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
 }
