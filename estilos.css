@@ -1,0 +1,13 @@
+:root {
+  --fondo: #d9d1d1;
+  --textos: #f40808;
+}
+h1 {
+  color: var(--textos);
+}
+h2 {
+  color: var(--textos);
+}
+p {
+  color: var(--textos);
+}
